@@ -1,4 +1,4 @@
-name: todo_list
+name: busca_gifs
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -23,7 +23,10 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  path_provider: ^1.3.0
+  share: ^0.6.1+1
+  transparent_image: ^1.0.0
+  http: ^0.12.0+2
+
 
 dev_dependencies:
   flutter_test:
