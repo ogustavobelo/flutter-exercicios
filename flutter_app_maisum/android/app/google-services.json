@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "951033168181",
+    "firebase_url": "https://testechat-e14c5.firebaseio.com",
+    "project_id": "testechat-e14c5",
+    "storage_bucket": "testechat-e14c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951033168181:android:96d89b35b5845287508c7c",
+        "android_client_info": {
+          "package_name": "br.com.ogustavobelo.flutter_app_maisum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951033168181-ic5d36rce7bbeekggkgbqburj71snm6e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.ogustavobelo.flutter_app_maisum",
+            "certificate_hash": "676bb35c3e493239aaedc055cf9a0bd8c666d387"
+          }
+        },
+        {
+          "client_id": "951033168181-o0b96o9b71r664k3c59dhsjfo37v4v35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY3gNiY0FYbfjm-kcQfUz_zMgib25mZIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951033168181-o0b96o9b71r664k3c59dhsjfo37v4v35.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
