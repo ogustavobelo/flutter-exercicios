@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "784946967249",
+    "firebase_url": "https://ebusiness-9ed0a.firebaseio.com",
+    "project_id": "ebusiness-9ed0a",
+    "storage_bucket": "ebusiness-9ed0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784946967249:android:e21ce7c89c6b76c7ff0bf0",
+        "android_client_info": {
+          "package_name": "com.ogustavobelo.ebusiness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784946967249-9bfk8hdm69jflqied039rss6oscrmp22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZB9Zu7MWActTalM8BCBBXTaIh1zlgHYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784946967249-9bfk8hdm69jflqied039rss6oscrmp22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
