@@ -1,9 +1,15 @@
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:ebusiness/datas/cart_product.dart';
 import 'package:ebusiness/datas/products_data.dart';
+import 'package:ebusiness/models/cart_model.dart';
+import 'package:ebusiness/models/user_model.dart';
+import 'package:ebusiness/pages/login_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'package:ebusiness/pages/cart_screen.dart';
+
 class ProductScreen extends StatefulWidget {
-  ProductData product;
+  final ProductData product;
   ProductScreen(this.product);
 
   @override
@@ -11,13 +17,13 @@ class ProductScreen extends StatefulWidget {
 }
 
 class _ProductScreenState extends State<ProductScreen> {
-  ProductData product;
+  final ProductData product;
   String size;
   _ProductScreenState(this.product);
 
   @override
   Widget build(BuildContext context) {
-    final primaryColor = Theme.of(context).primaryColor;
+    final Color primaryColor = Theme.of(context).primaryColor;
 
     return Scaffold(
       appBar: AppBar(
@@ -84,6 +90,7 @@ class _ProductScreenState extends State<ProductScreen> {
                   },
                   child: Container(
                     decoration: BoxDecoration(
+                      color: size == s ? primaryColor : null,
                       borderRadius: BorderRadius.all(Radius.circular(4)),
                       border: Border.all(
                           color: size == s ? primaryColor : Colors.grey,
@@ -91,7 +98,12 @@ class _ProductScreenState extends State<ProductScreen> {
                     ),
                     width: 50,
                     alignment: Alignment.center,
-                    child: Text(s),
+                    child: Text(
+                      s,
+                      style: TextStyle(
+                          color: size == s ? Colors.white : Colors.grey,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                 );
               }).toList(),
@@ -101,9 +113,31 @@ class _ProductScreenState extends State<ProductScreen> {
           SizedBox(
             height: 45,
             child: RaisedButton(
-              onPressed: size != null ? () {} : null,
+              onPressed: size != null
+                  ? () {
+                      if (UserModel.of(context).isLoggedIn()) {
+                        CartProduct cartProduct = CartProduct();
+
+                        cartProduct.size = size;
+                        cartProduct.quantity = 1;
+                        cartProduct.pid = product.id;
+                        cartProduct.category = product.category;
+                        cartProduct.productData = product;
+
+                        CartModel.of(context).addCartItem(cartProduct);
+
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => CartScreen()));
+                      } else {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => LoginScreen()));
+                      }
+                    }
+                  : null,
               child: Text(
-                "Adicionar ao Carrinho",
+                UserModel.of(context).isLoggedIn()
+                    ? "Adicionar ao Carrinho"
+                    : "Entre para Comprar",
                 style: TextStyle(fontSize: 18),
               ),
               color: primaryColor,
