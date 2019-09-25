@@ -1,4 +1,6 @@
 import 'package:ebusiness/tabs/home_tab.dart';
+import 'package:ebusiness/tabs/orders_tab.dart';
+import 'package:ebusiness/tabs/places_tab.dart';
 import 'package:ebusiness/tabs/products_tab.dart';
 import 'package:ebusiness/widgets/cart_button.dart';
 import 'package:flutter/material.dart';
@@ -27,12 +29,24 @@ class HomeScreen extends StatelessWidget {
           body: ProductsTab(),
           floatingActionButton: CartButton(),
         ),
-        Container(
-          color: Colors.yellow,
+        Scaffold(
+          appBar: AppBar(
+            title: Text("Lojas Disponíveis"),
+            centerTitle: true,
+          ),
+          body: PlacesTab(),
+          drawer: CustomDrawer(_pageController),
+          floatingActionButton: CartButton(),
         ),
-        Container(
-          color: Colors.orange,
-        ),
+        Scaffold(
+          appBar: AppBar(
+            title: Text("Meus Pedidos"),
+            centerTitle: true,
+          ),
+          body: OrdersTab(),
+          drawer: CustomDrawer(_pageController),
+          floatingActionButton: CartButton(),
+        )
       ],
     );
   }
