@@ -2,6 +2,9 @@
 ## série de apps feitos como forma de exercitar as funcionalidades do Flutter
 
 
+### - eBusiness - Firebase instance, ScopedModel, Page View, Drawer Navigation, Floating Action Button 
+![Contatos](https://github.com/ogustavobelo/flutter-exercicios/blob/master/gifs/ebusiness.gif)
+
 ### - Agenda de Contatos - SQFlite, URL_Launcher, ImagePicker
 ![Contatos](https://github.com/ogustavobelo/flutter-exercicios/blob/master/gifs/Agenda_Contatos.gif)
 
