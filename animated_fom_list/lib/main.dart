@@ -1,4 +1,5 @@
 import 'package:animated_fom_list/screens/home/home_screen.dart';
+import 'package:animated_fom_list/screens/intro_anim.dart';
 import 'package:animated_fom_list/screens/login/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: IntroAnim(),
     );
   }
 }
